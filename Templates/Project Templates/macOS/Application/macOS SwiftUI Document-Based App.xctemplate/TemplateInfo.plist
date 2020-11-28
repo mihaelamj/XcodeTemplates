@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.application.document-based.SwiftUI.macOS</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.macOSApplicationUI</string>
+    </array>
+    <key>Options</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>appLifecycle</string>
+            <key>Units</key>
+            <dict>
+                <key>SwiftUI</key>
+                <dict>
+                    <key>Nodes</key>
+                    <array>
+                        <string>___PACKAGENAME:identifier___App.swift</string>
+                        <string>___PACKAGENAME:identifier___Document.swift</string>
+                        <string>ContentView.swift</string>
+                        <string>Preview Content/Preview Assets.xcassets</string>
+                    </array>
+                    <key>Definitions</key>
+                    <dict>
+                        <key>___PACKAGENAME:identifier___App.swift</key>
+                        <dict>
+                            <key>Path</key>
+                            <string>DocumentApp.swift</string>
+                            <key>SortOrder</key>
+                            <integer>97</integer>
+                        </dict>
+                        <key>___PACKAGENAME:identifier___Document.swift</key>
+                        <dict>
+                            <key>Path</key>
+                            <string>Document.swift</string>
+                            <key>SortOrder</key>
+                            <integer>98</integer>
+                        </dict>
+                        <key>ContentView.swift</key>
+                        <dict>
+                            <key>Path</key>
+                            <string>ContentView.swift</string>
+                            <key>SortOrder</key>
+                            <integer>99</integer>
+                        </dict>
+                    </dict>
+                    <key>Targets</key>
+                    <array>
+                        <dict>
+                            <key>SharedSettings</key>
+                            <dict>
+                                <key>MACOSX_DEPLOYMENT_TARGET</key>
+                                <string>11.0</string>
+                                <key>ENABLE_PREVIEWS</key>
+                                <string>YES</string>
+                                <key>DEVELOPMENT_ASSET_PATHS</key>
+                                <string>___PACKAGENAMEPREVIEWCONTENT:quoteIfNeeded___</string>
+                            </dict>
+                        </dict>
+                    </array>
+                </dict>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>

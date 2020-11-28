@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.contentblockerextensionosx</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.osxAppExtensionBase</string>
+    </array>
+    <key>Concrete</key>
+    <true/>
+    <key>Description</key>
+    <string>This template builds a Safari Content Blocker application extension.</string>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>TargetIdentifier</key>
+            <string>com.apple.dt.contentBlockerExtension</string>
+            <key>SharedSettings</key>
+            <dict>
+                <key>CODE_SIGN_ENTITLEMENTS</key>
+                <string>___PACKAGENAME___/___PACKAGENAMEASIDENTIFIER___.entitlements</string>
+            </dict>
+            <key>Frameworks</key>
+            <array>
+                <string>Cocoa</string>
+            </array>
+        </dict>
+    </array>
+    <key>Options</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>languageChoice</string>
+            <key>Units</key>
+            <dict>
+                <key>Objective-C</key>
+                <array>
+                    <dict>
+                        <key>Nodes</key>
+                        <array>
+                            <string>ContentBlockerRequestHandler.h</string>
+                            <string>ContentBlockerRequestHandler.m</string>
+                        </array>
+                        <key>Definitions</key>
+                        <dict>
+                            <key>ContentBlockerRequestHandler.h</key>
+                            <dict>
+                                <key>Path</key>
+                                <string>ContentBlockerRequestHandler.h</string>
+                            </dict>
+                            <key>ContentBlockerRequestHandler.m</key>
+                            <dict>
+                                <key>Path</key>
+                                <string>ContentBlockerRequestHandler.m</string>
+                            </dict>
+                        </dict>
+                    </dict>
+                </array>
+                <key>Swift</key>
+                <array>
+                    <dict>
+                        <key>Nodes</key>
+                        <array>
+                            <string>ContentBlockerRequestHandler.swift</string>
+                        </array>
+                        <key>Definitions</key>
+                        <dict>
+                            <key>ContentBlockerRequestHandler.swift</key>
+                            <dict>
+                                <key>Path</key>
+                                <string>ContentBlockerRequestHandler.swift</string>
+                            </dict>
+                        </dict>
+                    </dict>
+                </array>
+            </dict>
+        </dict>
+    </array>
+    <key>Nodes</key>
+    <array>
+        <string>Info.plist:NSExtension</string>
+        <string>blockerList.json</string>
+        <string>___PACKAGENAMEASIDENTIFIER___.entitlements</string>
+    </array>
+    <key>Definitions</key>
+    <dict>
+        <key>Info.plist:NSExtension</key>
+        <string><![CDATA[<key>NSExtension</key>
+<dict>
+    <key>NSExtensionPrincipalClass</key>
+    <string>___VARIABLE_moduleNamePrefixForClasses:XML___ContentBlockerRequestHandler</string>
+    <key>NSExtensionPointIdentifier</key>
+    <string>com.apple.Safari.content-blocker</string>
+</dict>
+<key>NSHumanReadableDescription</key>
+<string>Add a description of what your extension does here.</string>
+]]></string>
+        <key>blockerList.json</key>
+        <dict>
+            <key>Path</key>
+            <string>blockerList.json</string>
+        </dict>
+        <key>___PACKAGENAMEASIDENTIFIER___.entitlements</key>
+        <dict>
+            <key>Path</key>
+            <string>___PACKAGENAMEASIDENTIFIER___.entitlements</string>
+            <key>SortOrder</key>
+            <integer>1000</integer>
+            <key>TargetIdentifiers</key>
+            <array/>
+        </dict>
+    </dict>
+</dict>
+</plist>

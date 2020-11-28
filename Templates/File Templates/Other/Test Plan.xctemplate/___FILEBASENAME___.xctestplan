@@ -1,0 +1,18 @@
+{
+  "configurations" : [
+    {
+      "id" : "___TEST_PLAN_INITIAL_CONFIGURATION_UUID___",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+
+  ],
+  "version" : 1
+}

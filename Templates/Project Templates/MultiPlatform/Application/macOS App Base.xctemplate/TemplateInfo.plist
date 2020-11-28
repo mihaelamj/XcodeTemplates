@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.crossPlatformAppBase_OSX</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.applicationBase</string>
+        <string>com.apple.dt.unit.osxBase_Definitions</string>
+        <string>com.apple.dt.unit.crossPlatformBase</string>
+    </array>
+    <key>Platforms</key>
+    <array>
+        <string>com.apple.platform.macosx</string>
+    </array>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>TargetIdentifier</key>
+            <string>com.apple.dt.osxApplicationTarget</string>
+            <key>SharedSettings</key>
+            <dict>
+                <key>COMBINE_HIDPI_IMAGES</key>
+                <string>YES</string>
+                <key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+                <string>AppIcon</string>
+                <key>ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME</key>
+                <string>AccentColor</string>
+                <key>LD_RUNPATH_SEARCH_PATHS</key>
+                <string>$(inherited) @executable_path/../Frameworks</string>
+                <key>SDKROOT</key>
+                <string>macosx</string>
+                <key>MACOSX_DEPLOYMENT_TARGET</key>
+                <string>___BESTMACOSVERSION___</string>
+            </dict>
+        </dict>
+    </array>
+    <key>Nodes</key>
+    <array>
+        <string>Info.plist:Icon</string>
+        <string>Info.plist:DeploymentTarget</string>
+        <string>Info.plist:NSHumanReadableCopyright</string>
+    </array>
+    <key>Definitions</key>
+    <dict>
+        <key>Info.plist:DeploymentTarget</key>
+        <string><![CDATA[<key>LSMinimumSystemVersion</key>
+<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
+]]></string>
+        <key>Info.plist:PrincipalClass</key>
+        <string><![CDATA[<key>NSPrincipalClass</key>
+<string>NSApplication</string>
+]]></string>
+        <key>Info.plist:Icon</key>
+        <string><![CDATA[<key>CFBundleIconFile</key>
+<string></string>
+]]></string>
+        <key>Info.plist:MainStoryboard</key>
+        <string><![CDATA[<key>NSMainStoryboardFile</key>
+<string>Main</string>
+]]></string>
+        <!-- This is defined globally for templates that don't want language choice -->
+        <key>main.m:main:NSApplicationMain</key>
+        <string>@autoreleasepool {
+    // Setup code that might create autoreleased objects goes here.
+}
+return NSApplicationMain(argc, argv);</string>
+        <key>*:implementation:methods:applicationDidFinishLaunching:comments</key>
+        <string>// Insert code here to initialize your application</string>
+        <key>*:implementation:methods:applicationWillTerminate:comments</key>
+        <string>// Insert code here to tear down your application</string>
+    </dict>
+    <key>Options</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>languageChoice</string>
+            <key>Units</key>
+            <dict>
+                <key>Objective-C</key>
+                <dict>
+                    <key>RequiredOptions</key>
+                    <dict>
+                        <key>appLifecycle</key>
+                        <string>Cocoa</string>
+                    </dict>
+                    <key>Nodes</key>
+                    <array>
+                        <string>Info.plist:PrincipalClass</string>
+                        <string>Info.plist:MainStoryboard</string>
+                        <string>Base.lproj/Main.storyboard</string>
+                        <string>AppDelegate.h:comments</string>
+                        <string>AppDelegate.h:imports:importCocoa</string>
+                        <string>AppDelegate.h:interface(AppDelegate : NSObject &lt;NSApplicationDelegate&gt;)</string>
+                        <string>AppDelegate.m:comments</string>
+                        <string>AppDelegate.m:imports:importHeader:AppDelegate.h</string>
+                        <string>AppDelegate.m:extension</string>
+                        <string>AppDelegate.m:implementation:methods:applicationDidFinishLaunching(- (void\)applicationDidFinishLaunching:(NSNotification *\)aNotification)</string>
+                        <string>AppDelegate.m:implementation:methods:applicationDidFinishLaunching:comments</string>
+                        <string>AppDelegate.m:implementation:methods:applicationWillTerminate(- (void\)applicationWillTerminate:(NSNotification *\)aNotification)</string>
+                        <string>AppDelegate.m:implementation:methods:applicationWillTerminate:comments</string>
+                        <string>main.m:comments</string>
+                        <string>main.m:imports:importCocoa</string>
+                        <string>main.m:main:NSApplicationMain</string>
+                    </array>
+                </dict>
+                <key>Swift</key>
+                <dict>
+                    <key>RequiredOptions</key>
+                    <dict>
+                        <key>appLifecycle</key>
+                        <string>Cocoa</string>
+                    </dict>
+                    <key>Nodes</key>
+                    <array>
+                        <string>Info.plist:PrincipalClass</string>
+                        <string>Info.plist:MainStoryboard</string>
+                        <string>Base.lproj/Main.storyboard</string>
+                        <string>AppDelegate.swift:comments</string>
+                        <string>AppDelegate.swift:imports:importCocoa</string>
+                        <string>AppDelegate.swift:NSApplicationMain</string>
+                        <string>AppDelegate.swift:implementation(AppDelegate: NSObject, NSApplicationDelegate)</string>
+                        <string>AppDelegate.swift:implementation:properties</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationDidFinishLaunching(func applicationDidFinishLaunching(_ aNotification: Notification\))</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationDidFinishLaunching:comments</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationWillTerminate(func applicationWillTerminate(_ aNotification: Notification\))</string>
+                        <string>AppDelegate.swift:implementation:methods:applicationWillTerminate:comments</string>
+                    </array>
+                    <key>Definitions</key>
+                    <dict>
+                        <key>AppDelegate.swift:NSApplicationMain</key>
+                        <string>@main</string>
+                    </dict>
+                </dict>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>

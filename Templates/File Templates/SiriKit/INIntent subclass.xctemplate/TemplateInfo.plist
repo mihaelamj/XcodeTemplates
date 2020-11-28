@@ -1,0 +1,13 @@
+{
+	"DefaultCompletionName" = Class;
+	Description = "An INIntent subclass.";
+	Kind = "Xcode.IDEIntentBuilderEditor.IntentTemplateKind";
+	AllowedTypes = (
+		"public.objective-c-source",
+		"public.swift-source",
+	);
+	Options = ();
+	Summary = "An INIntent subclass";
+    HiddenFromLibrary = YES;
+    HiddenFromChooser = YES;
+}

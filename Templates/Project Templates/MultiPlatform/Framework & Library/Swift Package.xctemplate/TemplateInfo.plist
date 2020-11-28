@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.IDESwiftPackageSupport.PackageProjectTemplateKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.packageTemplate.Library</string>
+    <key>PackageType</key>
+    <string>library</string>
+    <key>DefaultCompletionName</key>
+    <string>MyLibrary</string>
+    <key>Platforms</key>
+    <array />
+</dict>
+</plist>

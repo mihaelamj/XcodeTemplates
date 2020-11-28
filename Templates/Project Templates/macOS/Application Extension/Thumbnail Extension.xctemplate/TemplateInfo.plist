@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.quicklook.thumbnailosx</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.osxAppExtensionBase</string>
+    </array>
+    <key>Concrete</key>
+    <true/>
+    <key>Description</key>
+    <string>This template builds a QuickLook thumbnail application extension.</string>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>TargetIdentifier</key>
+            <string>com.apple.dt.quicklookthumbnailExtension</string>
+            <key>SharedSettings</key>
+            <dict>
+                <key>MACOSX_DEPLOYMENT_TARGET</key>
+                <string>10.15</string>
+                <key>CODE_SIGN_ENTITLEMENTS</key>
+                <string>___PACKAGENAME___/___PACKAGENAMEASIDENTIFIER___.entitlements</string>
+            </dict>
+            <key>Frameworks</key>
+            <array>
+                <string>QuickLookThumbnailing</string>
+                <string>Quartz</string>
+            </array>
+        </dict>
+    </array>
+    <key>Options</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>languageChoice</string>
+            <key>Units</key>
+            <dict>
+                <key>Objective-C</key>
+                <dict>
+                    <key>Nodes</key>
+                    <array>
+                        <string>ThumbnailProvider.h</string>
+                        <string>ThumbnailProvider.m</string>
+                    </array>
+                    <key>Definitions</key>
+                    <dict>
+                        <key>ThumbnailProvider.h</key>
+                        <dict>
+                            <key>Path</key>
+                            <string>ThumbnailProvider.h</string>
+                        </dict>
+                        <key>ThumbnailProvider.m</key>
+                        <dict>
+                            <key>Path</key>
+                            <string>ThumbnailProvider.m</string>
+                        </dict>
+                    </dict>
+                </dict>
+                <key>Swift</key>
+                <dict>
+                    <key>Nodes</key>
+                    <array>
+                        <string>ThumbnailProvider.swift</string>
+                    </array>
+                    <key>Definitions</key>
+                    <dict>
+                        <key>ThumbnailProvider.swift</key>
+                        <dict>
+                            <key>Path</key>
+                            <string>ThumbnailProvider.swift</string>
+                        </dict>
+                    </dict>
+                </dict>
+            </dict>
+        </dict>
+    </array>
+    <key>Nodes</key>
+    <array>
+        <string>Info.plist:NSExtension</string>
+        <string>___PACKAGENAMEASIDENTIFIER___.entitlements</string>
+    </array>
+    <key>Definitions</key>
+    <dict>
+        <key>Info.plist:NSExtension</key>
+        <string><![CDATA[<key>NSExtension</key>
+<dict>
+    <key>NSExtensionPrincipalClass</key>
+    <string>___VARIABLE_moduleNamePrefixForClasses:XML___ThumbnailProvider</string>
+    <key>NSExtensionAttributes</key>
+    <dict>
+        <key>QLSupportedContentTypes</key>
+        <!-- Add Uniform Type Identifiers for content types supported by this extension. -->
+        <array/>
+        <key>QLThumbnailMinimumDimension</key>
+        <integer>0</integer>
+    </dict>
+    <key>NSExtensionPointIdentifier</key>
+    <string>com.apple.quicklook.thumbnail</string>
+</dict>
+]]></string>
+        <key>___PACKAGENAMEASIDENTIFIER___.entitlements</key>
+        <dict>
+            <key>Path</key>
+            <string>___PACKAGENAMEASIDENTIFIER___.entitlements</string>
+            <key>SortOrder</key>
+            <integer>1000</integer>
+            <key>TargetIdentifiers</key>
+            <array/>
+        </dict>
+    </dict>
+</dict>
+</plist>

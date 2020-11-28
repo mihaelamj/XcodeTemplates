@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BuildableType</key>
+	<string>Hidden</string>
+	<key>DefaultCompletionName</key>
+	<string>TestPlan</string>
+	<key>Description</key>
+	<string>A test plan file allows specifying which test targets and tests to run and how to run them, and can be referenced by schemes.</string>
+	<key>Kind</key>
+	<string>Xcode.IDETestPlanEditor.TestPlanTemplateKind</string>
+	<key>MainTemplateFile</key>
+	<string>___FILEBASENAME___.xctestplan</string>
+	<key>Summary</key>
+	<string>An empty test plan file</string>
+</dict>
+</plist>

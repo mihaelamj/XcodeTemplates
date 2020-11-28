@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.base_Options</string>
+    <!-- This template defines the basic 4 options that all templates share. -->
+    <key>Options</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>productName</string>
+            <key>Required</key>
+            <true/>
+            <key>Name</key>
+            <string>Product Name:</string>
+            <key>NotPersisted</key>
+            <true/>
+            <key>Description</key>
+            <string>Your new product&apos;s name</string>
+            <key>EmptyReplacement</key>
+            <string>ProductName</string>
+            <key>Type</key>
+            <string>text</string>
+            <key>SortOrder</key>
+            <integer>-2</integer>
+        </dict>
+        <dict>
+            <key>Identifier</key>
+            <string>bundleIdentifierPrefix</string>
+            <key>Required</key>
+            <true/>
+            <key>Name</key>
+            <string>Organization Identifier:</string>
+            <key>Description</key>
+            <string>Your organization&apos;s bundle identifier prefix</string>
+            <key>EmptyReplacement</key>
+            <string>com.yourcompany</string>
+            <key>Type</key>
+            <string>text</string>
+        </dict>
+        <dict>
+            <key>Identifier</key>
+            <string>bundleIdentifier</string>
+            <key>Name</key>
+            <string>Bundle Identifier:</string>
+            <key>NotPersisted</key>
+            <true/>
+            <key>Description</key>
+            <string>Your new product&apos;s bundle identifier</string>
+            <key>Default</key>
+            <string>___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.___VARIABLE_productName:RFC1034Identifier___</string>
+            <key>Type</key>
+            <string>static</string>
+        </dict>
+    </array>
+</dict>
+</plist>

@@ -1,0 +1,9 @@
+//___FILEHEADER___
+//___COREDATAFILECOMMENTEPILOGUE___
+
+#import "___COREDATA_MANAGEDOBJECT_CLASS___+CoreDataProperties.h"
+
+@implementation ___COREDATA_MANAGEDOBJECT_CLASS___ (CoreDataProperties)
+
+___COREDATAPROPERTYIMPLEMENTATIONS___
+@end

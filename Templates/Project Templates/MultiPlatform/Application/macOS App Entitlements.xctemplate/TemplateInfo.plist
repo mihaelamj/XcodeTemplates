@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.crossPlatformAppEntitlements_OSX</string>
+    <key>Platforms</key>
+    <array>
+        <string>com.apple.platform.macosx</string>
+    </array>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>TargetIdentifier</key>
+            <string>com.apple.dt.osxApplicationTarget</string>
+            <key>SharedSettings</key>
+            <dict>
+                <key>CODE_SIGN_ENTITLEMENTS</key>
+                <string>___PACKAGENAME___/___PACKAGENAMEASIDENTIFIER___.entitlements</string>
+            </dict>
+        </dict>
+    </array>
+    <key>Nodes</key>
+    <array>
+        <string>___PACKAGENAMEASIDENTIFIER___.entitlements</string>
+    </array>
+    <key>Definitions</key>
+    <dict>
+        <key>___PACKAGENAMEASIDENTIFIER___.entitlements</key>
+        <dict>
+            <key>Path</key>
+            <string>___PACKAGENAMEASIDENTIFIER___.entitlements</string>
+            <key>SortOrder</key>
+            <integer>1000</integer>
+            <key>TargetIdentifiers</key>
+            <array />
+        </dict>
+    </dict>
+</dict>
+</plist>

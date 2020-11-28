@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.base_DefinitionsInfoPlist</string>
+    <!-- This template contains only definitions. The definitions provide the basics for Info.plist generation.  -->
+    <key>Definitions</key>
+    <dict>
+        <key>Info.plist</key>
+        <dict>
+            <key>Beginning</key>
+            <string><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+]]></string>
+            <key>End</key>
+            <string><![CDATA[</dict>
+</plist>]]></string>
+            <key>Indent</key>
+            <integer>1</integer>
+            <key>SortOrder</key>
+            <integer>200</integer>
+            <key>TargetIdentifiers</key>
+            <array/>
+            <key>SubstituteMacros</key>
+            <true/>
+        </dict>
+        <key>Info.plist:Identifier</key>
+        <string><![CDATA[<key>CFBundleIdentifier</key>
+<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+]]></string>
+        <key>Info.plist:PlistVersion</key>
+        <string><![CDATA[<key>CFBundleInfoDictionaryVersion</key>
+<string>6.0</string>
+]]></string>
+        <key>Info.plist:Executable</key>
+        <string><![CDATA[<key>CFBundleExecutable</key>
+<string>$(EXECUTABLE_NAME)</string>
+]]></string>
+        <key>Info.plist:BundleName</key>
+        <string><![CDATA[<key>CFBundleName</key>
+<string>$(PRODUCT_NAME)</string>
+]]></string>
+        <key>Info.plist:DevelopmentRegion</key>
+        <string><![CDATA[<key>CFBundleDevelopmentRegion</key>
+<string>$(DEVELOPMENT_LANGUAGE)</string>
+]]></string>
+        <key>Info.plist:PackageType</key>
+        <string><![CDATA[<key>CFBundlePackageType</key>
+<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
+]]></string>
+        <key>Info.plist:ProductVersion</key>
+        <string><![CDATA[<key>CFBundleShortVersionString</key>
+<string>1.0</string>
+<key>CFBundleVersion</key>
+<string>1</string>
+]]></string>
+    </dict>
+</dict>
+</plist>

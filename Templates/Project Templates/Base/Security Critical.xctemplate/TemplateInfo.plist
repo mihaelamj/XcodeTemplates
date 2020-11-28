@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.securityCriticalBase</string>
+    <key>Ancestors</key>
+    <array>
+    </array>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>Concrete</key>
+            <false/>
+            <key>SharedSettings</key>
+            <dict>
+<!-- Settings we want to be the default for security-critical codebases. -->
+                <key>RUN_CLANG_STATIC_ANALYZER</key>
+                <string>YES</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.coreDataDocumentApplication</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.cocoaApplicationDocumentBased</string>
+    </array>
+    <key>Options</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>coreData</string>
+            <key>Name</key>
+            <string>Use Core Data</string>
+            <key>Description</key>
+            <string>Whether the application should use the Core Data framework for storage</string>
+            <key>SortOrder</key>
+            <integer>200</integer>
+            <key>Type</key>
+            <string>checkbox</string>
+            <key>Default</key>
+            <string>false</string>
+            <key>RequiredOptions</key>
+            <dict>
+                <key>appLifecycle</key>
+                <string>Cocoa</string>
+            </dict>
+            <key>Units</key>
+            <dict>
+                <key>true</key>
+                <array>
+                    <dict>
+                        <key>Nodes</key>
+                        <array>
+                            <string>Document.xcdatamodeld</string>
+                        </array>
+                        <key>Definitions</key>
+                        <dict>
+                            <key>Info.plist:DocumentTypes</key>
+                            <string><![CDATA[<key>CFBundleDocumentTypes</key>
+<array>
+    <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>LSItemContentTypes</key>
+        <array>
+            <string>com.example.persistent-store</string>
+        </array>
+        <key>NSDocumentClass</key>
+        <string>___VARIABLE_moduleNamePrefixForClasses___Document</string>
+        <key>NSPersistentStoreTypeKey</key>
+        <string>SQLite</string>
+    </dict>
+</array>
+]]></string>
+                            <key>Info.plist:UTImportedTypeDeclarations</key>
+                            <string><![CDATA[<key>UTImportedTypeDeclarations</key>
+<array>
+    <dict>
+        <key>UTTypeIdentifier</key>
+        <string>com.example.persistent-store</string>
+        <key>UTTypeDescription</key>
+        <string>Example Persistent Store</string>
+        <key>UTTypeConformsTo</key>
+        <array>
+            <string>public.data</string>
+            <string>public.content</string>
+            <string>public.database</string>
+        </array>
+        <key>UTTypeTagSpecification</key>
+        <dict>
+            <key>public.filename-extension</key>
+            <array>
+                <string>example-db</string>
+            </array>
+        </dict>
+    </dict>
+</array>
+]]></string>
+                            <key>Document.xcdatamodeld</key>
+                            <dict>
+                                <key>Path</key>
+                                <string>Document.xcdatamodeld</string>
+                                <key>SortOrder</key>
+                                <integer>99</integer>
+                            </dict>
+                        </dict>
+                    </dict>
+                    <dict>
+                        <key>RequiredOptions</key>
+                        <dict>
+                            <key>languageChoice</key>
+                            <string>Objective-C</string>
+                        </dict>
+                        <key>Definitions</key>
+                        <dict>
+                            <key>Document.h:interface</key>
+                            <dict>
+                                <key>Beginning</key>
+                                <string>@interface Document : NSPersistentDocument</string>
+                                <key>End</key>
+                                <string>@end</string>
+                            </dict>
+                        </dict>
+                    </dict>
+                    <dict>
+                        <key>RequiredOptions</key>
+                        <dict>
+                            <key>languageChoice</key>
+                            <string>Swift</string>
+                        </dict>
+                        <key>Definitions</key>
+                        <dict>
+                            <key>Document.swift:implementation</key>
+                            <dict>
+                                <key>Beginning</key>
+                                <string>class Document: NSPersistentDocument {
+</string>
+                                <key>End</key>
+                                <string>}</string>
+                                <key>Indent</key>
+                                <integer>1</integer>
+                            </dict>
+                        </dict>
+                    </dict>
+                    <dict>
+                        <key>RequiredOptions</key>
+                        <dict>
+                            <key>languageChoice</key>
+                            <string>Swift</string>
+                            <key>userInterface</key>
+                            <string>SwiftUI</string>
+                        </dict>
+                        <key>Nodes</key>
+                        <array>
+                            <string>Document.swift:implementation:methods:makeWindowControllers:code</string>
+                        </array>
+                        <key>Definitions</key>
+                        <dict>
+                            <key>Document.swift:implementation:methods:makeWindowControllers:code</key>
+                            <string>// Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
+// Add `@Environment(\.managedObjectContext)` in the views that will need the context.
+let contentView = ContentView().environment(\.managedObjectContext, self.managedObjectContext!)</string>
+                        </dict>
+                    </dict>
+                </array>
+                <key>false</key>
+                <array>
+                    <dict>
+                        <key>RequiredOptions</key>
+                        <dict>
+                            <key>languageChoice</key>
+                            <string>Objective-C</string>
+                        </dict>
+                        <key>Nodes</key>
+                        <array>
+                            <string>Document.m:implementation:methods:dataOfType(- (NSData *\)dataOfType:(NSString *\)typeName error:(NSError **\)outError)</string>
+                            <string>Document.m:implementation:methods:dataOfType:comments</string>
+                            <string>Document.m:implementation:methods:dataOfType:code</string>
+                            <string>Document.m:implementation:methods:readFromData(- (BOOL\)readFromData:(NSData *\)data ofType:(NSString *\)typeName error:(NSError **\)outError)</string>
+                            <string>Document.m:implementation:methods:readFromData:comments</string>
+                            <string>Document.m:implementation:methods:readFromData:code</string>
+                            <string>Document.m:implementation:methods:readFromData:comments:isEntireFileLoaded</string>
+                        </array>
+                        <key>Definitions</key>
+                        <dict>
+                            <key>Document.m:implementation:methods:dataOfType:comments</key>
+                            <string>// Insert code here to write your document to data of the specified type. If outError != NULL, ensure that you create and set an appropriate error if you return nil.
+// Alternatively, you could remove this method and override -fileWrapperOfType:error:, -writeToURL:ofType:error:, or -writeToURL:ofType:forSaveOperation:originalContentsURL:error: instead.
+</string>
+                            <key>Document.m:implementation:methods:dataOfType:code</key>
+                            <string>[NSException raise:@"UnimplementedMethod" format:@"%@ is unimplemented", NSStringFromSelector(_cmd)];
+return nil;
+</string>
+                            <key>Document.m:implementation:methods:readFromData:comments</key>
+                            <string>// Insert code here to read your document from the given data of the specified type. If outError != NULL, ensure that you create and set an appropriate error if you return NO.
+// Alternatively, you could remove this method and override -readFromFileWrapper:ofType:error: or -readFromURL:ofType:error: instead.</string>
+                            <key>Document.m:implementation:methods:readFromData:code</key>
+                            <string>[NSException raise:@"UnimplementedMethod" format:@"%@ is unimplemented", NSStringFromSelector(_cmd)];
+return YES;
+</string>
+                            <key>Document.m:implementation:methods:readFromData:comments:isEntireFileLoaded</key>
+                            <string>// If you do, you should also override -isEntireFileLoaded to return NO if the contents are lazily loaded.</string>
+                        </dict>
+                    </dict>
+                    <dict>
+                        <key>RequiredOptions</key>
+                        <dict>
+                            <key>languageChoice</key>
+                            <string>Swift</string>
+                        </dict>
+                        <key>Nodes</key>
+                        <array>
+                            <string>Document.swift:implementation:methods:dataOfType(override func data(ofType typeName: String\) throws -&gt; Data)</string>
+                            <string>Document.swift:implementation:methods:dataOfType:comments</string>
+                            <string>Document.swift:implementation:methods:dataOfType:code</string>
+                            <string>Document.swift:implementation:methods:readFromData(override func read(from data: Data, ofType typeName: String\) throws)</string>
+                            <string>Document.swift:implementation:methods:readFromData:comments</string>
+                            <string>Document.swift:implementation:methods:readFromData:code</string>
+                            <string>Document.swift:implementation:methods:readFromData:comments:isEntireFileLoaded</string>
+                        </array>
+                        <key>Definitions</key>
+                        <dict>
+                            <key>Document.swift:implementation:methods:dataOfType:comments</key>
+                            <string>// Insert code here to write your document to data of the specified type, throwing an error in case of failure.
+// Alternatively, you could remove this method and override fileWrapper(ofType:), write(to:ofType:), or write(to:ofType:for:originalContentsURL:) instead.
+</string>
+                            <key>Document.swift:implementation:methods:dataOfType:code</key>
+                            <string>throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
+</string>
+                            <key>Document.swift:implementation:methods:readFromData:comments</key>
+                            <string>// Insert code here to read your document from the given data of the specified type, throwing an error in case of failure.
+// Alternatively, you could remove this method and override read(from:ofType:) instead.</string>
+                            <key>Document.swift:implementation:methods:readFromData:code</key>
+                            <string>throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
+</string>
+                            <key>Document.swift:implementation:methods:readFromData:comments:isEntireFileLoaded</key>
+                            <string>// If you do, you should also override isEntireFileLoaded to return false if the contents are lazily loaded.</string>
+                        </dict>
+                    </dict>
+                </array>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.genericKernelExtension</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.bundleBase</string>
+        <string>com.apple.dt.unit.osxBase</string>
+        <string>com.apple.dt.unit.securityCriticalBase</string>
+    </array>
+    <key>Concrete</key>
+    <true/>
+    <key>Description</key>
+    <string>This template builds a kernel extension.</string>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>ProductType</key>
+            <string>com.apple.product-type.kernel-extension</string>
+            <key>TargetIdentifier</key>
+            <string>com.apple.dt.cocoaGenericKernelExtensionTarget</string>
+            <key>SharedSettings</key>
+            <dict>
+                <key>MACOSX_DEPLOYMENT_TARGET</key>
+                <string>___BESTMACOSVERSION___</string>
+                <key>MODULE_NAME</key>
+                <string>___VARIABLE_bundleIdentifierPrefix___.___PACKAGENAMEASIDENTIFIER___</string>
+                <key>MODULE_START</key>
+                <string>___PACKAGENAMEASIDENTIFIER____start</string>
+                <key>MODULE_STOP</key>
+                <string>___PACKAGENAMEASIDENTIFIER____stop</string>
+                <key>MODULE_VERSION</key>
+                <string>1.0.0d1</string>
+                <key>WRAPPER_EXTENSION</key>
+                <string>kext</string>
+                <key>CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER</key>
+                <string>NO</string>
+            </dict>
+            <key>BuildPhases</key>
+            <array>
+                <dict>
+                    <key>Class</key>
+                    <string>Headers</string>
+                </dict>
+                <dict>
+                    <key>Class</key>
+                    <string>Sources</string>
+                </dict>
+                <dict>
+                    <key>Class</key>
+                    <string>Frameworks</string>
+                </dict>
+                <dict>
+                    <key>Class</key>
+                    <string>Resources</string>
+                </dict>
+            </array>
+        </dict>
+    </array>
+    <key>Nodes</key>
+    <array>
+        <string>Info.plist:kernel</string>
+        <string>Info.plist:NSHumanReadableCopyright</string>
+        <string>___PACKAGENAMEASIDENTIFIER___.c</string>
+    </array>
+    <key>Definitions</key>
+    <dict>
+        <key>Info.plist:kernel</key>
+        <string><![CDATA[<key>OSBundleLibraries</key>
+<dict/>
+]]></string>
+        <key>___PACKAGENAMEASIDENTIFIER___.c</key>
+        <dict>
+            <key>Path</key>
+            <string>___PACKAGENAMEASIDENTIFIER___.c</string>
+        </dict>
+    </dict>
+</dict>
+</plist>

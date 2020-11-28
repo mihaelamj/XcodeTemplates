@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.metalLibrary.base</string>
+    <key>Description</key>
+    <string>This template builds a Metal library.</string>
+    <key>SortOrder</key>
+    <integer>50</integer>
+    <key>Options</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>productName</string>
+            <key>Required</key>
+            <true/>
+            <key>Name</key>
+            <string>Product Name:</string>
+            <key>NotPersisted</key>
+            <true/>
+            <key>Description</key>
+            <string>Your new product&apos;s name</string>
+            <key>EmptyReplacement</key>
+            <string>ProductName</string>
+            <key>Type</key>
+            <string>text</string>
+            <key>SortOrder</key>
+            <integer>-2</integer>
+        </dict>
+    </array>
+    <key>Project</key>
+    <dict>
+        <!-- These project-level settings are basically settings that we wished were the defaults... but they aren't -->
+        <key>SharedSettings</key>
+        <dict>
+            <key>ALWAYS_SEARCH_USER_PATHS</key>
+            <string>NO</string>
+            <key>MTL_FAST_MATH</key>
+            <string>YES</string>
+        </dict>
+        <key>Configurations</key>
+        <dict>
+            <key>Debug</key>
+            <dict>
+                <key>MTL_ENABLE_DEBUG_INFO</key>
+                <string>INCLUDE_SOURCE</string>
+            </dict>
+            <key>Release</key>
+            <dict>
+                <key>MTL_ENABLE_DEBUG_INFO</key>
+                <string>NO</string>
+            </dict>
+        </dict>
+    </dict>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>TargetIdentifier</key>
+            <string>com.apple.dt.metalLibraryTarget</string>
+            <key>Name</key>
+            <string>___PACKAGENAME___</string>
+            <key>ProductType</key>
+            <string>com.apple.product-type.metal-library</string>
+            <key>BuildPhases</key>
+            <array>
+                <dict>
+                    <key>Class</key>
+                    <string>Sources</string>
+                </dict>
+            </array>
+            <key>SharedSettings</key>
+            <dict>
+                <key>PRODUCT_NAME</key>
+                <string>$(TARGET_NAME)</string>
+            </dict>
+        </dict>
+    </array>
+    <key>Nodes</key>
+    <array>
+        <string>___PACKAGENAMEASIDENTIFIER___.metal</string>
+    </array>
+    <key>Definitions</key>
+    <dict>
+        <key>___PACKAGENAMEASIDENTIFIER___.metal</key>
+        <dict>
+            <key>Path</key>
+            <string>___PACKAGENAMEASIDENTIFIER___.metal</string>
+        </dict>
+    </dict>
+</dict>
+</plist>

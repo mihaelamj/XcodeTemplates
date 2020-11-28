@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.apple.dt.unit.base_DefinitionsLanguage</string>
+	<key>Definitions</key>
+	<dict>
+		<key>*:implementation:methods</key>
+		<dict>
+			<key>Beginning</key>
+			<string></string>
+			<key>End</key>
+			<string></string>
+		</dict>
+		<key>*:implementation:methods:*</key>
+		<dict>
+			<key>Beginning</key>
+			<string>___*___ {</string>
+			<key>End</key>
+			<string>}
+
+</string>
+			<key>Indent</key>
+			<integer>1</integer>
+		</dict>
+		<key>*:implementation:properties</key>
+		<dict>
+			<key>Beginning</key>
+			<string></string>
+			<key>End</key>
+			<string>
+
+</string>
+		</dict>
+		<key>*:comments</key>
+		<string>//___FILEHEADER___
+</string>
+		<key>*:imports</key>
+		<dict>
+			<key>Beginning</key>
+			<string></string>
+			<key>End</key>
+			<string>
+</string>
+		</dict>
+		<key>*:imports:importHeader:*</key>
+		<string>#import &quot;___*___&quot;</string>
+		<key>*:imports:importFramework:*</key>
+		<string>#import &lt;___*___/___*___.h&gt;</string>
+		<key>*:class:*</key>
+		<string>@class ___*___;
+</string>
+		<key>*:interface</key>
+		<dict>
+			<key>Beginning</key>
+			<string>@interface ___*___
+</string>
+			<key>End</key>
+			<string>
+@end
+</string>
+		</dict>
+		<key>*:extension</key>
+		<dict>
+			<key>Beginning</key>
+			<string>@interface ___FILEBASENAME___ ()
+</string>
+			<key>End</key>
+			<string>@end
+</string>
+		</dict>
+		<key>*:implementation</key>
+		<dict>
+			<key>Beginning</key>
+			<string>@implementation ___FILEBASENAME___
+</string>
+			<key>End</key>
+			<string>@end</string>
+		</dict>
+		<key>*:implementation:synthesize</key>
+		<dict>
+			<key>End</key>
+			<string>
+</string>
+		</dict>
+		<key>*:implementation:synthesize:*</key>
+		<string>@synthesize ___*___;</string>
+		<key>*:implementation:methods:init</key>
+		<dict>
+			<key>Beginning</key>
+			<string>- (instancetype)init {
+    self = [super init];
+    if (self) {</string>
+			<key>End</key>
+			<string>    }
+    return self;
+}
+</string>
+			<key>Indent</key>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>languageChoice</string>
+			<key>Units</key>
+			<dict>
+				<key>Objective-C</key>
+				<dict>
+					<key>Definitions</key>
+					<dict/>
+				</dict>
+				<key>Swift</key>
+				<dict>
+					<key>Definitions</key>
+					<dict>
+						<key>*:imports:importHeader:*</key>
+						<string></string>
+						<key>*:imports:importFramework:*</key>
+						<string>import ___*___</string>
+						<key>*:class:*</key>
+						<string></string>
+						<key>*:implementation</key>
+						<dict>
+							<key>Beginning</key>
+							<string>class ___*___ {
+</string>
+							<key>End</key>
+							<string>
+}
+</string>
+							<key>Indent</key>
+							<integer>1</integer>
+						</dict>
+						<key>*:implementation:methods:init</key>
+						<dict>
+							<key>Beginning</key>
+							<string>override init() {
+    super.init()
+</string>
+							<key>End</key>
+							<string>}
+
+</string>
+							<key>Indent</key>
+							<integer>1</integer>
+						</dict>
+					</dict>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

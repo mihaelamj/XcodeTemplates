@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.crossPlatformBase</string>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>Concrete</key>
+            <false/>
+            <key>SharedSettings</key>
+            <dict>
+                <!-- Override product name and bundle identifier to use product name option variabel, not package name or expanded target name -->
+               <key>PRODUCT_NAME</key>
+                <string>___VARIABLE_productName___</string>
+                <key>PRODUCT_BUNDLE_IDENTIFIER</key>
+                <string>___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.___VARIABLE_productName:RFC1034Identifier___</string>
+            </dict>
+        </dict>
+    </array>
+
+    <key>Definitions</key>
+    <dict>
+        <!-- Override file header comments... We don't want PACKAGENAME 
+        <key>*:comments</key>
+        <string>//
+//  ___FILENAME___
+//  ___VARIABLE_productName___
+//
+//  Created by ___FULLUSERNAME___ on ___DATE___.
+//___COPYRIGHT___
+//
+</string> -->
+    </dict>
+</dict>
+</plist>

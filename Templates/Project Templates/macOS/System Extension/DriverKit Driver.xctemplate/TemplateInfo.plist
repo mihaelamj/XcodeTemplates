@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.genericDriverExtension</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.bundleBase</string>
+        <string>com.apple.dt.unit.driverKitBase</string>
+    </array>
+    <key>Concrete</key>
+    <true/>
+    <key>Description</key>
+    <string>This template builds a DriverKit driver.</string>
+    <key>AssociatedTargetSpecification</key>
+    <dict>
+        <key>PopUpTitle</key>
+        <string>Embed in Application:</string>
+        <key>PopUpDescription</key>
+        <string>The application target that will host this new driver. The application will be set up to embed the new driver.</string>
+        <key>AllowableProductTypes</key>
+        <array>
+            <string>com.apple.product-type.application</string>
+        </array>
+        <key>AllowablePlatforms</key>
+        <array>
+            <string>com.apple.platform.macosx</string>
+        </array>
+        <key>AssociatedTargetIsDependent</key>
+        <true/>
+        <key>AssociatedTargetNeedsProductBuildPhaseInjection</key>
+        <true/>
+    </dict>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>ProductType</key>
+            <string>com.apple.product-type.driver-extension</string>
+            <key>TargetIdentifier</key>
+            <string>com.apple.dt.genericDriverExtensionTarget</string>
+            <key>SharedSettings</key>
+            <dict>
+                <key>CODE_SIGN_ENTITLEMENTS</key>
+                <string>___PACKAGENAME___/___PACKAGENAMEASIDENTIFIER___.entitlements</string>
+                <key>CODE_SIGN_STYLE</key>
+                <string>Manual</string>
+                <key>SKIP_INSTALL</key>
+                <string>YES</string>
+                <key>PRODUCT_NAME</key>
+                <string>$(inherited)</string>
+            </dict>
+            <key>BuildPhases</key>
+            <array>
+                <dict>
+                    <key>Class</key>
+                    <string>Headers</string>
+                </dict>
+                <dict>
+                    <key>Class</key>
+                    <string>Sources</string>
+                </dict>
+                <dict>
+                    <key>Class</key>
+                    <string>Frameworks</string>
+                </dict>
+                <dict>
+                    <key>Class</key>
+                    <string>Resources</string>
+                </dict>
+            </array>
+            <key>Frameworks</key>
+            <array>
+                <string>DriverKit</string>
+            </array>
+        </dict>
+    </array>
+    <key>Nodes</key>
+    <array>
+        <string>Info.plist:kernel</string>
+        <string>Info.plist:NSHumanReadableCopyright</string>
+        <string>___PACKAGENAMEASIDENTIFIER___.cpp</string>
+        <string>___PACKAGENAMEASIDENTIFIER___.iig</string>
+        <string>___PACKAGENAMEASIDENTIFIER___.entitlements</string>
+    </array>
+    <key>Definitions</key>
+    <dict>
+        <key>Info.plist:kernel</key>
+        <string><![CDATA[<key>IOKitPersonalities</key>
+<dict>
+    <key>___PACKAGENAMEASIDENTIFIER___</key>
+    <dict>
+        <key>IOMatchCategory</key>
+        <string>com.apple.null.driver</string>
+        <key>IOResourceMatch</key>
+        <string>IOKit</string>
+        <key>IOUserServerName</key>
+        <string>com.apple.null.driver</string>
+        <key>IOProviderClass</key>
+        <string>IOUserResources</string>
+        <key>IOUserClass</key>
+        <string>___PACKAGENAMEASIDENTIFIER___</string>
+        <key>IOClass</key>
+        <string>IOUserService</string>
+        <key>CFBundleIdentifier</key>
+        <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+        <key>CFBundleIdentifierKernel</key>
+        <string>com.apple.kpi.iokit</string>
+    </dict>
+</dict>
+<key>OSBundleUsageDescription</key>
+<string></string>
+]]></string>
+        <key>___PACKAGENAMEASIDENTIFIER___.cpp</key>
+        <dict>
+            <key>Path</key>
+            <string>___PACKAGENAMEASIDENTIFIER___.cpp</string>
+        </dict>
+        <key>___PACKAGENAMEASIDENTIFIER___.iig</key>
+        <dict>
+            <key>Path</key>
+            <string>___PACKAGENAMEASIDENTIFIER___.iig</string>
+        </dict>
+        <key>___PACKAGENAMEASIDENTIFIER___.entitlements</key>
+        <dict>
+            <key>Path</key>
+            <string>___PACKAGENAMEASIDENTIFIER___.entitlements</string>
+            <key>SortOrder</key>
+            <integer>1000</integer>
+            <key>TargetIdentifiers</key>
+            <array/>
+        </dict>
+    </dict>
+</dict>
+</plist>

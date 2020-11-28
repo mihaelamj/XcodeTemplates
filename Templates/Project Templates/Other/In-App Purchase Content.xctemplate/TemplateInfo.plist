@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.inapppurchasecontent</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.base</string>
+    </array>
+    <key>Concrete</key>
+    <true/>
+    <key>Description</key>
+    <string>This template builds an In-App Purchase Content package.</string>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>ProductType</key>
+            <string>com.apple.product-type.in-app-purchase-content</string>
+            <key>TargetIdentifier</key>
+            <string>com.apple.dt.inAppPurchaseTarget</string>
+            <key>SharedSettings</key>
+            <dict>
+                <key>INFOPLIST_FILE</key>
+                <string>___PACKAGENAME___/ContentInfo.plist</string>
+                <key>INSTALL_PATH</key>
+                <string>$(LOCAL_LIBRARY_DIR)/InAppPurchaseContent</string>
+                <key>WRAPPER_EXTENSION</key>
+                <string></string>
+            </dict>
+            <key>BuildPhases</key>
+            <array>
+                <dict>
+                    <key>Class</key>
+                    <string>Resources</string>
+                </dict>
+            </array>
+        </dict>
+    </array>
+    <key>Nodes</key>
+    <array>
+        <string>ContentInfo.plist</string>
+    </array>
+    <key>Definitions</key>
+    <dict>
+        <key>ContentInfo.plist</key>
+        <dict>
+            <key>Path</key>
+            <string>ContentInfo.plist</string>
+            <key>TargetIdentifiers</key>
+            <array/>
+            <key>SubstituteMacros</key>
+            <true/>
+        </dict>
+    </dict>
+</dict>
+</plist>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.appLifecycle.macOS</string>
+    <key>Options</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>appLifecycle</string>
+            <key>Required</key>
+            <true/>
+            <key>Name</key>
+            <string>Life Cycle:</string>
+            <key>Description</key>
+            <string>The application life cycle to use.</string>
+            <key>SortOrder</key>
+            <integer>110</integer>
+            <key>Values</key>
+            <array>
+                <string>SwiftUI</string>
+                <string>Cocoa</string>
+            </array>
+            <key>RequiredOptionsForValues</key>
+            <dict>
+                <key>SwiftUI</key>
+                <dict>
+                    <key>userInterface</key>
+                    <string>SwiftUI</string>
+                </dict>
+            </dict>
+            <key>Default</key>
+            <string>SwiftUI</string>
+            <key>ConditionalOverride</key>
+            <dict>
+                <key>Condition</key>
+                <string>SwiftUIAppLifeCycle</string>
+                <key>FalseValue</key>
+                <string>Cocoa</string>
+            </dict>
+            <key>Type</key>
+            <string>popup</string>
+            <key>Units</key>
+            <dict>
+                <key>SwiftUI</key>
+                <dict>
+                    <key>Description</key>
+                    <string>SwiftUI App</string>
+                </dict>
+                <key>Cocoa</key>
+                <dict>
+                    <key>Description</key>
+                    <string>AppKit App Delegate</string>
+                </dict>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>

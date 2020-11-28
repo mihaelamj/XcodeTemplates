@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.apple.dt.unit.osxSystemExtensionBase</string>
+	<key>Ancestors</key>
+	<array>
+		<string>com.apple.dt.unit.osxAppExtensionBase</string>
+	</array>
+	<key>Concrete</key>
+	<false/>
+	<key>Targets</key>
+	<array>
+		<dict>
+			<key>SharedSettings</key>
+			<dict />
+			<key>Frameworks</key>
+			<array />
+			<key>ProductType</key>
+			<string>com.apple.product-type.system-extension</string>
+			<key>TargetIdentifier</key>
+			<string>com.apple.dt.osxSystemExtension</string>
+			<key>SharedSettings</key>
+			<dict>
+				<key>PRODUCT_NAME</key>
+				<string>$(inherited)</string>
+			</dict>
+		</dict>
+	</array>
+	<key>Options</key>
+	<array />
+	<key>Nodes</key>
+	<array />
+	<key>Definitions</key>
+	<dict />
+</dict>
+</plist>

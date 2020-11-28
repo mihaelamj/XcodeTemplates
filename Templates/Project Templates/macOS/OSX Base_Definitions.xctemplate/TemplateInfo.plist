@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.osxBase_Definitions</string>
+    <key>Options</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>languageChoice</string>
+            <key>Units</key>
+            <dict>
+                <key>Swift</key>
+                <dict>
+                    <key>RequiredOptions</key>
+                    <dict>
+                        <key>appLifecycle</key>
+                        <string>Cocoa</string>
+                    </dict>
+                    <key>Definitions</key>
+                    <dict>
+                        <key>*:imports:importCocoa</key>
+                        <string>import Cocoa</string>
+                        <key>*:imports:importFoundation</key>
+                        <string>import Foundation</string>
+                    </dict>
+                </dict>
+            </dict>
+        </dict>
+    </array>
+    <key>Definitions</key>
+    <dict>
+        <key>Info.plist:NSHumanReadableCopyright</key>
+        <string>___NSHUMANREADABLECOPYRIGHTPLIST___</string>
+        <!-- This is defined globally for templates that don't want language choice -->
+        <key>*:imports:importCocoa</key>
+        <string>#import &lt;Cocoa/Cocoa.h&gt;</string>
+        <key>*:imports:importCocoaForUmbrellaHeader</key>
+        <string>#import &lt;Cocoa/Cocoa.h&gt;</string>
+        <key>*:imports:importFoundation</key>
+        <string>#import &lt;Foundation/Foundation.h&gt;</string>
+        <key>*:imports:importFoundationForUmbrellaHeader</key>
+        <string>#import &lt;Foundation/Foundation.h&gt;</string>
+    </dict>
+</dict>
+</plist>

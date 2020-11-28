@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.driverKitBase</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.securityCriticalBase</string>
+    </array>
+    <key>Platforms</key>
+    <array>
+        <string>com.apple.platform.macosx</string>
+    </array>
+    <key>Project</key>
+    <dict>
+        <key>SDK</key>
+        <string>driverkit</string>
+        <key>SharedSettings</key>
+        <dict>
+            <key>DRIVERKIT_DEPLOYMENT_TARGET</key>
+            <string>___BESTDRIVERKITVERSION___</string>
+
+            <!-- Consider setting this as a platform-level default for DriverKit in future -->
+            <key>CLANG_CXX_LANGUAGE_STANDARD</key>
+            <string>gnu++17</string>
+        </dict>
+    </dict>
+</dict>
+</plist>

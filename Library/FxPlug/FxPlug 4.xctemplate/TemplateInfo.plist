@@ -1,0 +1,362 @@
+{
+	Kind = "Xcode.Xcode3.ProjectTemplateUnitKind";
+	Identifier = "com.apple.unit.FxPlug4";
+	Concrete = YES;
+	Ancestors = (
+		"com.apple.dt.unit.base",
+		"com.apple.dt.unit.languageChoice",
+	);
+	Platforms = (
+		"com.apple.platform.macosx",
+	);
+	Project = {
+		SDK = macosx;
+		SharedSettings = {
+			"MACOSX_DEPLOYMENT_TARGET" = "___RUNNINGOSXVERSION___";
+			"GCC_ENABLE_OBJC_EXCEPTIONS" = YES;
+			"CLANG_ENABLE_OBJC_ARC" = NO;
+			"FRAMEWORK_SEARCH_PATHS" = "/Library/Developer/Frameworks $(inherited)";
+			"SWIFT_VERSION" = 4;
+		};
+		Configurations = {
+			Debug = {
+				"ONLY_ACTIVE_ARCH" = YES;
+			};
+			Release = {
+				"DEBUG_INFORMATION_FORMAT" = "dwarf-with-dsym";
+			};
+		};
+	};
+	Targets = (
+		{
+			Name = "Wrapper Application";
+			ProductType = "com.apple.product-type.application";
+			SharedSettings = {
+				"PRODUCT_NAME" = "___PACKAGENAME___";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "$(PRODUCT_NAME:rfc1034identifier)";
+				"INFOPLIST_FILE" = "___PACKAGENAME___/Wrapper Application/Info.plist";
+				"GCC_PRECOMPILE_PREFIX_HEADER" = YES;
+				"CODE_SIGN_ENTITLEMENTS" = "___PACKAGENAME___/Wrapper Application/SandboxEntitlements.entitlements";
+				"SWIFT_OBJC_BRIDGING_HEADER" = "___PACKAGENAME___/Wrapper Application/Wrapper Application-Bridging-Header.h";
+			};
+			BuildPhases = (
+				{
+					Class = Sources;
+				},
+				{
+					Class = Frameworks;
+				},
+				{
+					Class = Resources;
+				},
+			);
+			Frameworks = (
+				Cocoa,
+			);
+			TargetIdentifier = "com.apple.fxplug.wrapperAppTarget";
+			Dependencies = (
+				"com.apple.fxplug.xpcTarget",
+			);
+		},
+		{
+			Name = "XPC Service";
+			ProductType = "com.apple.product-type.bundle";
+			SharedSettings = {
+				"PRODUCT_NAME" = "___PACKAGENAME___ $(TARGET_NAME)";
+				"PRODUCT_BUNDLE_IDENTIFIER" = "$(PRODUCT_NAME:rfc1034identifier)";
+				"MACH_O_TYPE" = "mh_execute";
+				"INFOPLIST_FILE" = "___PACKAGENAME___/Plugin/Info.plist";
+				"GCC_PRECOMPILE_PREFIX_HEADER" = YES;
+				"LD_RUNPATH_SEARCH_PATHS" = "$(inherited) @loader_path/../Frameworks";
+				"WRAPPER_EXTENSION" = pluginkit;
+				"SWIFT_OBJC_BRIDGING_HEADER" = "___PACKAGENAME___/Plugin/XPC Service-Bridging-Header.h";
+			};
+			"ProductBuildPhaseInjections" = (
+				{
+					TargetIdentifier = "com.apple.fxplug.wrapperAppTarget";
+				},
+			);
+			BuildPhases = (
+				{
+					Class = Sources;
+				},
+				{
+					Class = Frameworks;
+				},
+				{
+					Class = Resources;
+				},
+				{
+					Class = ShellScript;
+					Name = "Embed FxPlug.framework";
+					ShellPath = "/bin/sh";
+					ShellScript = "mkdir -p \"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}\"\nrsync --archive --links --whole-file --no-owner --no-group --checksum --exclude='Headers' \"/Library/Developer/Frameworks/FxPlug.framework/\" \"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FxPlug.framework/\"\nif [ \"$?\" -ne 0 ]; then echo \"error: rsync failed; couldn't embed FxPlug.framework\"; exit 1; fi\n";
+					InputPaths = (
+						"/Library/Developer/Frameworks/FxPlug.framework",
+					);
+					OutputPaths = (
+						"$(TARGET_BUILD_DIR)/$(FRAMEWORKS_FOLDER_PATH)/FxPlug.framework",
+					);
+					ShowEnvVarsInLog = No;
+				},
+			);
+			Frameworks = (
+				Foundation,
+				AppKit,
+				Accelerate,
+				"../../../../../../Library/Developer/Frameworks/PluginManager",
+				"../../../../../../Library/Developer/Frameworks/FxPlug",
+			);
+			TargetIdentifier = "com.apple.fxplug.xpcTarget";
+			Dependencies = (
+				"com.apple.fxplug.pluginTarget",
+			);
+		},
+	);
+	Nodes = (
+		"Wrapper Application/Base.lproj/MainMenu.xib",
+		"Wrapper Application/en.lproj/Credits.rtf",
+		"Wrapper Application/en.lproj/InfoPlist.strings",
+		"Wrapper Application/Info.plist",
+		"Wrapper Application/SandboxEntitlements.entitlements",
+		"Plugin/Info.plist",
+		"Plugin/en.lproj/InfoPlist.strings",
+		"Plugin/en.lproj/Localizable.strings",
+		"Plugin/TileableRemoteBrightness.metal",
+		"Plugin/TileableRemoteBrightnessShaderTypes.h",
+	);
+	Definitions = {
+		"Wrapper Application/Info.plist" = {
+			Group = "Wrapper Application";
+			Path = "Wrapper Application/Info.plist";
+			SubstituteMacros = Yes;
+			SortOrder = 3;
+			TargetIndices = ();
+		};
+		"Wrapper Application/en.lproj/InfoPlist.strings" = {
+			Group = "Wrapper Application";
+			SubstituteMacros = Yes;
+			SortOrder = 4;
+			TargetIndices = (
+				0,
+			);
+		};
+		"Wrapper Application/Base.lproj/MainMenu.xib" = {
+			Group = "Wrapper Application";
+			Path = "Wrapper Application/base.lproj/MainMenu.xib";
+			SubstituteMacros = Yes;
+			SortOrder = 5;
+			TargetIndices = (
+				0,
+			);
+		};
+		"Wrapper Application/en.lproj/Credits.rtf" = {
+			Group = "Wrapper Application";
+			Path = "Wrapper Application/en.lproj/Credits.rtf";
+			SubstituteMacros = Yes;
+			SortOrder = 6;
+			TargetIndices = (
+				0,
+			);
+		};
+		"Wrapper Application/SandboxEntitlements.entitlements" = {
+			Group = "Wrapper Application";
+			Path = "Wrapper Application/SandboxEntitlements.entitlements";
+			SubstituteMacros = YES;
+			SortOrder = 7;
+			TargetIndices = (
+				0,
+			);
+		};
+		"Plugin/TileableRemoteBrightnessShaderTypes.h" = {
+			Group = Plugin;
+			Path = "Plugin/TileableRemoteBrightnessShaderTypes.h";
+			SubstituteMacros = Yes;
+			SortOrder = 7;
+			TargetIndices = ();
+		};
+		"Plugin/TileableRemoteBrightness.metal" = {
+			Group = Plugin;
+			Path = "Plugin/TileableRemoteBrightness.metal";
+			SubstituteMacros = Yes;
+			SortOrder = 6;
+			TargetIndices = (
+				1,
+			);
+		};
+		"Plugin/Info.plist" = {
+			Group = Plugin;
+			Path = "Plugin/Info.plist";
+			SubstituteMacros = Yes;
+			SortOrder = 9;
+			TargetIndices = ();
+		};
+		"Plugin/en.lproj/InfoPlist.strings" = {
+			Group = Plugin;
+			Path = "Plugin/en.lproj/InfoPlist.strings";
+			SubstituteMacros = Yes;
+			SortOrder = 10;
+			TargetIndices = (
+				1,
+			);
+		};
+		"Plugin/en.lproj/Localizable.strings" = {
+			Group = Plugin;
+			Path = "Plugin/en.lproj/Localizable.strings";
+			SubstituteMacros = Yes;
+			SortOrder = 11;
+			TargetIndices = (
+				1,
+			);
+		};
+	};
+	Options = (
+		{
+			Identifier = languageChoice;
+			Units = {
+				"Objective-C" = {
+					Nodes = (
+						"Wrapper Application/AppDelegate.h",
+						"Wrapper Application/AppDelegate.m",
+						"Wrapper Application/main.m",
+						"Plugin/___PACKAGENAMEASIDENTIFIER___PlugIn.h",
+						"Plugin/___PACKAGENAMEASIDENTIFIER___PlugIn.m",
+						"Plugin/MetalDeviceCache.h",
+						"Plugin/MetalDeviceCache.m",
+						"Plugin/main.m",
+					);
+					Definitions = {
+						"Wrapper Application/AppDelegate.h" = {
+							Group = "Wrapper Application";
+							Path = "Wrapper Application/AppDelegate.h";
+							SubstituteMacros = Yes;
+							SortOrder = 0;
+							TargetIndices = ();
+						};
+						"Wrapper Application/AppDelegate.m" = {
+							Group = "Wrapper Application";
+							Path = "Wrapper Application/AppDelegate.m";
+							SubstituteMacros = Yes;
+							SortOrder = 1;
+							TargetIndices = (
+								0,
+							);
+						};
+						"Wrapper Application/main.m" = {
+							Group = "Wrapper Application";
+							Path = "Wrapper Application/main.m";
+							SubstituteMacros = YES;
+							SortOrder = 2;
+							TargetIndices = (
+								0,
+							);
+						};
+						"Plugin/___PACKAGENAMEASIDENTIFIER___PlugIn.h" = {
+							Group = Plugin;
+							Path = "Plugin/PlugIn.h";
+							SubstituteMacros = Yes;
+							SortOrder = 1;
+							TargetIndices = ();
+						};
+						"Plugin/MetalDeviceCache.h" = {
+							Group = Plugin;
+							Path = "Plugin/MetalDeviceCache.h";
+							SubstituteMacros = Yes;
+							SortOrder = 3;
+							TargetIndices = ();
+						};
+						"Plugin/___PACKAGENAMEASIDENTIFIER___PlugIn.m" = {
+							Group = Plugin;
+							Path = "Plugin/PlugIn.m";
+							SubstituteMacros = Yes;
+							SortOrder = 2;
+							TargetIndices = (
+								1,
+							);
+						};
+						"Plugin/MetalDeviceCache.m" = {
+							Group = Plugin;
+							Path = "Plugin/MetalDeviceCache.m";
+							SubstituteMacros = Yes;
+							SortOrder = 4;
+							TargetIndices = (
+								1,
+							);
+						};
+						"Plugin/main.m" = {
+							Group = Plugin;
+							Path = "Plugin/main.m";
+							SubstituteMacros = Yes;
+							SortOrder = 8;
+							TargetIndices = (
+								1,
+							);
+						};
+					};
+				};
+				Swift = {
+					Nodes = (
+						"Wrapper Application/AppDelegate.swift",
+						"Wrapper Application/Wrapper Application-Bridging-Header.h",
+						"Plugin/___PACKAGENAMEASIDENTIFIER___PlugIn.swift",
+						"Plugin/MetalDeviceCache.swift",
+						"Plugin/main.swift",
+						"Plugin/XPC Service-Bridging-Header.h",
+					);
+					Definitions = {
+						"Wrapper Application/AppDelegate.swift" = {
+							Group = "Wrapper Application";
+							Path = "Wrapper Application/AppDelegate.swift";
+							SubstituteMacros = Yes;
+							SortOrder = 1;
+							TargetIndices = (
+								0,
+							);
+						};
+						"Wrapper Application/Wrapper Application-Bridging-Header.h" = {
+							Group = "Wrapper Application";
+							Path = "Wrapper Application/Wrapper Application-Bridging-Header.h";
+							SubstituteMacros = Yes;
+							SortOrder = 8;
+							TargetIndices = ();
+						};
+						"Plugin/___PACKAGENAMEASIDENTIFIER___PlugIn.swift" = {
+							Group = Plugin;
+							Path = "Plugin/PlugIn.swift";
+							SubstituteMacros = Yes;
+							SortOrder = 1;
+							TargetIndices = (
+								1,
+							);
+						};
+						"Plugin/MetalDeviceCache.swift" = {
+							Group = Plugin;
+							Path = "Plugin/MetalDeviceCache.swift";
+							SubstituteMacros = Yes;
+							SortOrder = 2;
+							TargetIndices = (
+								1,
+							);
+						};
+						"Plugin/main.swift" = {
+							Group = Plugin;
+							Path = "Plugin/main.swift";
+							SubstituteMacros = Yes;
+							SortOrder = 8;
+							TargetIndices = (
+								1,
+							);
+						};
+						"Plugin/XPC Service-Bridging-Header.h" = {
+							Group = Plugin;
+							Path = "Plugin/XPC Service-Bridging-Header.h";
+							SubstituteMacros = Yes;
+							SortOrder = 12;
+							TargetIndices = ();
+						};
+					};
+				};
+			};
+		},
+	);
+}
