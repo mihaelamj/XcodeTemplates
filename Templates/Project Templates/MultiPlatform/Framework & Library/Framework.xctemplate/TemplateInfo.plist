@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.multiPlatform.framework</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.frameworkBase</string>
+        <string>com.apple.dt.unit.languageChoice</string>
+        <string>com.apple.dt.unit.multiPlatform.base</string>
+    </array>
+    <key>Concrete</key>
+    <true/>
+    <key>Platforms</key>
+    <array />
+    <key>Description</key>
+    <string>This template creates a multi-platform framework.</string>
+    <key>SortOrder</key>
+    <integer>1</integer>
+    <key>AssociatedTargetSpecification</key>
+    <dict>
+        <key>PopUpTitle</key>
+        <string>Embed in Application:</string>
+        <key>PopUpDescription</key>
+        <string>The application target that will host this new framework. The application will be set up to link to and embed the new framework.</string>
+        <key>AllowableProductTypes</key>
+        <array>
+            <string>com.apple.product-type.application.on-demand-install-capable</string>
+            <string>com.apple.product-type.application</string>
+            <string>com.apple.product-type.app-extension.messages</string>
+            <string>com.apple.product-type.watchkit2-extension</string>
+        </array>
+        <key>AssociatedTargetIsDependent</key>
+        <true/>
+        <key>AssociatedTargetNeedsProductBuildPhaseInjection</key>
+        <true/>
+    </dict>
+    <key>Options</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>languageChoice</string>
+            <key>Override</key>
+            <string>Swift</string>
+        </dict>
+        <dict>
+            <key>Identifier</key>
+            <string>userInterface</string>
+            <key>Override</key>
+            <string>SwiftUI</string>
+        </dict>
+        <dict>
+            <key>Identifier</key>
+            <string>appLifecycle</string>
+            <key>Override</key>
+            <string>SwiftUI</string>
+        </dict>
+        <dict>
+            <key>Identifier</key>
+            <string>hasUnitTests</string>
+            <key>Name</key>
+            <string>Include Tests</string>
+            <key>NotPersisted</key>
+            <false/>
+            <key>SortOrder</key>
+            <integer>100</integer>
+            <key>Type</key>
+            <string>checkbox</string>
+            <key>Default</key>
+            <string>true</string>
+            <key>Units</key>
+            <dict>
+                <key>true</key>
+                <dict>
+                    <key>Components</key>
+                    <array>
+                        <dict>
+                            <key>Identifier</key>
+                            <string>com.apple.dt.unit.multiPlatform.frameworkUnitTestBundle</string>
+                            <key>Name</key>
+                            <string>___PACKAGENAME___Tests</string>
+                        </dict>
+                    </array>
+                </dict>
+            </dict>
+        </dict>
+    </array>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>TargetIdentifier</key>
+            <string>com.apple.dt.multiPlatform.libraryOrFrameworkTarget</string>
+            <key>SharedSettings</key>
+            <dict>
+                <key>LD_RUNPATH_SEARCH_PATHS</key>
+                <string>@executable_path/Frameworks @loader_path/Frameworks</string>
+                <key>LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]</key>
+                <string>@executable_path/../Frameworks @loader_path/Frameworks</string>
+            </dict>
+        </dict>
+    </array>
+    <key>Definitions</key>
+    <dict>
+        <key>___TARGETNAME:c99ExtIdentifier___.h</key>
+        <dict>
+            <key>TargetIdentifiers</key>
+            <array>
+                <string>com.apple.dt.multiPlatform.libraryOrFrameworkTarget</string>
+            </array>
+            <key>BuildAttributes</key>
+            <array>
+                <string>Public</string>
+            </array>
+        </dict>
+        <key>*:imports:importFoundationForUmbrellaHeader</key>
+        <string>#import &lt;Foundation/Foundation.h&gt;</string>
+    </dict>
+    <key>Image</key>
+    <dict>
+        <key>BundleImageName</key>
+        <string>framework</string>
+        <key>BundleIdentifier</key>
+        <string>com.apple.dt.IDEKit</string>
+    </dict>
+</dict>
+</plist>

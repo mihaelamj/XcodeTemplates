@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SupportsSwiftPackage</key>
+	<true/>
+	<key>Kind</key>
+	<string>Xcode.IDESwiftPackageUI.TextSubstitutionPlaygroundsAppTemplateKind</string>
+	<key>Identifier</key>
+	<string>com.apple.dt.playground.app.ios</string>
+	<key>Name</key>
+	<string>Swift Playgrounds App</string>
+	<key>Summary</key>
+	<string>A Swift Playgrounds App Project</string>
+	<key>Description</key>
+	<string>This template provides a starting point for a Swift Playgrounds app.</string>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>App Name:</string>
+			<key>NotPersisted</key>
+			<true/>
+			<key>Description</key>
+			<string>Your new app&apos;s name</string>
+			<key>EmptyReplacement</key>
+			<string>AppName</string>
+			<key>Type</key>
+			<string>text</string>
+			<key>SortOrder</key>
+			<integer>-2</integer>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>bundleIdentifierPrefix</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Organization Identifier:</string>
+			<key>Description</key>
+			<string>Your organization&apos;s bundle identifier prefix</string>
+			<key>EmptyReplacement</key>
+			<string>com.yourcompany</string>
+			<key>Type</key>
+			<string>text</string>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>bundleIdentifier</string>
+			<key>Name</key>
+			<string>Bundle Identifier:</string>
+			<key>NotPersisted</key>
+			<true/>
+			<key>Description</key>
+			<string>Your new app&apos;s bundle identifier</string>
+			<key>Default</key>
+			<string>___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.___VARIABLE_productName:RFC1034Identifier___</string>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+	</array>
+	<key>NameOfInitialFileForEditor</key>
+	<string>ContentView.swift</string>
+	<key>SortOrder</key>
+	<string>12</string>
+	<key>MainTemplateFile</key>
+	<string>___FILEBASENAME___.swiftpm</string>
+	<key>AllowedTypes</key>
+	<array>
+		<string>com.apple.swiftpm-playgrounds-project</string>
+	</array>
+	<key>DefaultCompletionName</key>
+	<string>My App</string>
+	<key>Platforms</key>
+	<array>
+		<string>com.apple.platform.iphoneos</string>
+	</array>
+	<key>Image</key>
+	<dict>
+		<key>BundleImageName</key>
+		<string>playground.app.new</string>
+		<key>BundleIdentifier</key>
+		<string>com.apple.dt.IDE.IDESwiftPackageUI</string>
+	</dict>
+</dict>
+</plist>

@@ -1,0 +1,12 @@
+{
+	"DefaultCompletionName" = Class;
+	Description = "A Transient App Entity.";
+	Kind = "Xcode.IDEIntentBuilderEditor.TransientAppEntityTemplateKind";
+	AllowedTypes = (
+		"public.swift-source",
+	);
+	Options = ();
+	Summary = "A Transient App Entity";
+	HiddenFromLibrary = YES;
+	HiddenFromChooser = YES;
+}

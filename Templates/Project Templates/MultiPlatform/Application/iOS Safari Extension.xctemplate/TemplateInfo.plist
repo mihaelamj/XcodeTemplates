@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+	<key>Identifier</key>
+	<string>com.apple.dt.unit.multiPlatform.safariExtension.iOS</string>
+	<key>Ancestors</key>
+	<array>
+		<string>com.apple.dt.unit.iosAppExtensionBase</string>
+	</array>
+    <key>Project</key>
+    <dict>
+        <key>SharedSettings</key>
+        <dict>
+            <key>IPHONEOS_DEPLOYMENT_TARGET</key>
+            <string>15.0</string>
+        </dict>
+    </dict>
+	<key>Targets</key>
+	<array>
+        <dict>
+            <key>TargetIdentifier</key>
+            <string>com.apple.dt.safariExtension.iOS</string>
+            <key>Name</key>
+            <string>___PARENTPACKAGENAME___ Extension (iOS)</string>
+            <key>SharedSettings</key>
+            <dict>
+                <key>PRODUCT_NAME</key>
+                <string>___PARENTPACKAGENAME___ Extension</string>
+                <key>INFOPLIST_KEY_CFBundleDisplayName</key>
+                <string>___PARENTPACKAGENAME___ Extension</string>
+                <key>OTHER_LDFLAGS</key>
+                <string>-framework SafariServices</string>
+            </dict>
+        </dict>
+	</array>
+    <key>Nodes</key>
+    <array>
+        <string>Info.plist:NSExtension</string>
+    </array>
+    <key>Definitions</key>
+    <dict>
+        <key>Info.plist:NSExtension</key>
+        <string><![CDATA[<key>NSExtension</key>
+<dict>
+    <key>NSExtensionPointIdentifier</key>
+    <string>com.apple.Safari.web-extension</string>
+    <key>NSExtensionPrincipalClass</key>
+    <string>___VARIABLE_moduleNamePrefixForClasses:XML___SafariWebExtensionHandler</string>
+</dict>
+]]></string>
+    </dict>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Identifier</key>
+			<string>extensionBundleIdentifier</string>
+			<key>Units</key>
+			<dict>
+				<key>ForAppTemplate</key>
+				<dict>
+					<key>Targets</key>
+					<array>
+						<dict>
+							<key>SharedSettings</key>
+							<dict>
+								<key>PRODUCT_BUNDLE_IDENTIFIER</key>
+								<string>___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.___PROJECTNAME:rfc1034Identifier___.Extension</string>
+							</dict>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>

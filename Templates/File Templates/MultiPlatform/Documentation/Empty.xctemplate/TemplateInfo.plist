@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SupportsSwiftPackage</key>
+	<true/>
+	<key>DefaultCompletionName</key>
+	<string>Empty</string>
+	<key>Description</key>
+	<string>A markdown file.</string>
+	<key>Kind</key>
+	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
+	<key>MainTemplateFile</key>
+	<string>___FILEBASENAME___.md</string>
+	<key>Summary</key>
+	<string>A markdown file.</string>
+	<key>BuildableType</key>
+	<string>None</string>
+	<key>SortOrder</key>
+	<integer>4</integer>
+	<key>Platforms</key>
+	<array/>
+	<key>Image</key>
+	<dict>
+		<key>FileTypeIcon</key>
+		<string>md</string>
+	</dict>
+</dict>
+</plist>

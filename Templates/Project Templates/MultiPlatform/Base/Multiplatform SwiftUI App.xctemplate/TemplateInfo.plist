@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.multiPlatform.app.SwiftUI</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.applicationBase.SwiftUI</string>
+        <string>com.apple.dt.unit.multiPlatform.base</string>
+    </array>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>SharedSettings</key>
+            <dict>
+                <key>CODE_SIGN_ENTITLEMENTS</key>
+                <string>___PACKAGENAME___/___PACKAGENAME:identifier___.entitlements</string>
+                <key>INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]</key>
+                <string>YES</string>
+                <key>INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]</key>
+                <string>YES</string>
+                <key>INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]</key>
+                <string>YES</string>
+                <key>INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]</key>
+                <string>YES</string>
+                <key>INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]</key>
+                <string>UIStatusBarStyleDefault</string>
+                <key>INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]</key>
+                <string>UIStatusBarStyleDefault</string>
+                <key>INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]</key>
+                <string>YES</string>
+                <key>INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]</key>
+                <string>YES</string>
+                <key>INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone</key>
+                <string>UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight</string>
+                <key>INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad</key>
+                <string>UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight</string>
+                <key>LD_RUNPATH_SEARCH_PATHS</key>
+                <string>@executable_path/Frameworks</string>
+                <key>LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]</key>
+                <string>@executable_path/../Frameworks</string>
+            </dict>
+        </dict>
+    </array>
+    <key>Nodes</key>
+    <array>
+        <string>___PACKAGENAME:identifier___.entitlements</string>
+    </array>
+    <key>Definitions</key>
+    <dict>
+        <key>___PACKAGENAME:identifier___.entitlements</key>
+        <dict>
+            <key>Path</key>
+            <string>App.entitlements</string>
+            <key>SortOrder</key>
+            <integer>105</integer>
+            <key>TargetIdentifiers</key>
+            <array />
+        </dict>
+        <key>Assets.xcassets</key>
+        <dict>
+            <key>Path</key>
+            <string>Assets.xcassets</string>
+            <key>SortOrder</key>
+            <integer>100</integer>
+            <key>AssetGeneration</key>
+            <array>
+                <dict>
+                    <key>Type</key>
+                    <string>appicon</string>
+                    <key>Name</key>
+                    <string>AppIcon</string>
+                    <key>Platforms</key>
+                    <dict>
+                        <key>iOS</key>
+                        <string>true</string>
+                        <key>macOS</key>
+                        <string>true</string>
+                    </dict>
+                </dict>
+            </array>
+        </dict>
+    </dict>
+</dict>
+</plist>

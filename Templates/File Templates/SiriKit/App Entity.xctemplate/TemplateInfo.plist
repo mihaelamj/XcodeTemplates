@@ -1,0 +1,12 @@
+{
+	"DefaultCompletionName" = Class;
+	Description = "An App Entity.";
+	Kind = "Xcode.IDEIntentBuilderEditor.AppEntityTemplateKind";
+	AllowedTypes = (
+		"public.swift-source",
+	);
+	Options = ();
+	Summary = "An App Entity";
+	HiddenFromLibrary = YES;
+	HiddenFromChooser = YES;
+}

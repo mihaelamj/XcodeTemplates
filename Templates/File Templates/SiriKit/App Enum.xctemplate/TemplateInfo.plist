@@ -1,0 +1,12 @@
+{
+	"DefaultCompletionName" = Class;
+	Description = "An App Enumeration.";
+	Kind = "Xcode.IDEIntentBuilderEditor.AppEnumerationTemplateKind";
+	AllowedTypes = (
+		"public.swift-source",
+	);
+	Options = ();
+	Summary = "An App Enumeration";
+	HiddenFromLibrary = YES;
+	HiddenFromChooser = YES;
+}

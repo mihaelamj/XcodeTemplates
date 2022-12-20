@@ -1,0 +1,12 @@
+{
+	"DefaultCompletionName" = Class;
+	Description = "An App Intent.";
+	Kind = "Xcode.IDEIntentBuilderEditor.LinkActionTemplateKind";
+	AllowedTypes = (
+		"public.swift-source",
+	);
+	Options = ();
+	Summary = "An App Intent";
+	HiddenFromLibrary = YES;
+	HiddenFromChooser = YES;
+}

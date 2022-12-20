@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.applicationBase.document-based.SwiftUI</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.applicationBase</string>
+    </array>
+    <key>NameOfInitialFileForEditor</key>
+    <string>ContentView.swift</string>
+    <key>SortOrder</key>
+    <integer>1</integer>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>TargetIdentifier</key>
+            <string>com.apple.dt.applicationTarget</string>
+            <key>SharedSettings</key>
+            <dict>
+                <key>ENABLE_PREVIEWS</key>
+                <string>YES</string>
+                <key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+                <string>AppIcon</string>
+                <key>ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME</key>
+                <string>AccentColor</string>
+                <key>DEVELOPMENT_ASSET_PATHS</key>
+                <string>___PACKAGENAMEPREVIEWCONTENT:quoteIfNeeded___</string>
+                <key>INFOPLIST_FILE</key>
+                <string>___PACKAGENAME___/Info.plist</string>
+            </dict>
+        </dict>
+    </array>
+    <key>Options</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>languageChoice</string>
+            <key>Override</key>
+            <string>Swift</string>
+        </dict>
+        <dict>
+            <key>Identifier</key>
+            <string>appLifecycle</string>
+            <key>Override</key>
+            <string>SwiftUI</string>
+        </dict>
+    </array>
+    <key>Nodes</key>
+    <array>
+        <string>___PACKAGENAME:identifier___App.swift</string>
+        <string>___PACKAGENAME:identifier___Document.swift</string>
+        <string>ContentView.swift</string>
+        <string>Assets.xcassets</string>
+        <string>Preview Content/Preview Assets.xcassets</string>
+        <string>Info.plist:CFBundleDocumentTypes</string>
+        <string>Info.plist:UTImportedTypeDeclarations</string>
+    </array>
+    <key>Definitions</key>
+    <dict>
+        <key>___PACKAGENAME:identifier___App.swift</key>
+        <dict>
+            <key>Path</key>
+            <string>DocumentApp.swift</string>
+            <key>SortOrder</key>
+            <integer>100</integer>
+        </dict>
+        <key>___PACKAGENAME:identifier___Document.swift</key>
+        <dict>
+            <key>Path</key>
+            <string>Document.swift</string>
+            <key>SortOrder</key>
+            <integer>101</integer>
+        </dict>
+        <key>ContentView.swift</key>
+        <dict>
+            <key>Path</key>
+            <string>ContentView.swift</string>
+            <key>SortOrder</key>
+            <integer>102</integer>
+        </dict>
+        <key>Assets.xcassets</key>
+        <dict>
+            <key>Path</key>
+            <string>Assets.xcassets</string>
+            <key>AssetGeneration</key>
+            <array>
+                <dict>
+                    <key>Type</key>
+                    <string>appicon</string>
+                    <key>Name</key>
+                    <string>AppIcon</string>
+                </dict>
+                <!-- AccentColor is placed statically. -->
+            </array>
+            <key>SortOrder</key>
+            <integer>190</integer>
+        </dict>
+        <key>Preview Content/Preview Assets.xcassets</key>
+        <dict>
+            <key>Group</key>
+            <string>Preview Content</string>
+            <key>Path</key>
+            <string>Preview Assets.xcassets</string>
+            <key>SortOrder</key>
+            <integer>300</integer>
+        </dict>
+        <key>Info.plist:CFBundleDocumentTypes</key>
+        <string><![CDATA[<key>CFBundleDocumentTypes</key>
+<array>
+    <dict>
+        <key>CFBundleTypeRole</key>
+        <string>Editor</string>
+        <key>LSItemContentTypes</key>
+        <array>
+            <string>com.example.plain-text</string>
+        </array>
+        <key>NSUbiquitousDocumentUserActivityType</key>
+        <string>$(PRODUCT_BUNDLE_IDENTIFIER).example-document</string>
+    </dict>
+</array>
+]]></string>
+        <key>Info.plist:UTImportedTypeDeclarations</key>
+        <string><![CDATA[<key>UTImportedTypeDeclarations</key>
+<array>
+    <dict>
+        <key>UTTypeIdentifier</key>
+        <string>com.example.plain-text</string>
+        <key>UTTypeDescription</key>
+        <string>Example Text</string>
+        <key>UTTypeConformsTo</key>
+        <array>
+            <string>public.plain-text</string>
+        </array>
+        <key>UTTypeTagSpecification</key>
+        <dict>
+            <key>public.filename-extension</key>
+            <array>
+                <string>exampletext</string>
+            </array>
+        </dict>
+    </dict>
+</array>
+]]></string>
+    </dict>
+    <key>Image</key>
+    <dict>
+        <key>BundleImageName</key>
+        <string>app</string>
+        <key>BundleIdentifier</key>
+        <string>com.apple.dt.IDEKit</string>
+    </dict>
+</dict>
+</plist>

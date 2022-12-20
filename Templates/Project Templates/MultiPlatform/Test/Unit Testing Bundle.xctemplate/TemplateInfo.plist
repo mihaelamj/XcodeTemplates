@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.multiPlatform.unitTestBundle</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.multiPlatform.unitTestBundleBase</string>
+    </array>
+    <key>Concrete</key>
+    <true/>
+    <key>Platforms</key>
+    <array />
+    <key>Description</key>
+    <string>This target builds a unit test bundle that uses the XCTest framework.</string>
+    <key>Targets</key>
+    <array>
+        <dict>
+            <key>TargetIdentifier</key>
+            <string>com.apple.dt.multiPlatform.unitTestBundleTarget</string>
+        </dict>
+    </array>
+    <key>OptionConstraints</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>productName</string>
+            <key>ConstraintType</key>
+            <string>DefaultIfAssociatedTarget</string>
+            <key>Value</key>
+            <string>___ASSOCIATEDTARGET_bundleName___Tests</string>
+        </dict>
+    </array>
+    <key>Image</key>
+    <dict>
+        <key>BundleImageName</key>
+        <string>unittest</string>
+        <key>BundleIdentifier</key>
+        <string>com.apple.dt.IDEKit</string>
+    </dict>
+</dict>
+</plist>

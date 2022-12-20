@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SupportsSwiftPackage</key>
+	<true/>
+	<key>Description</key>
+	<string>Documentation catalogs store and categorize resources for different type of documentation, such as articles, reference, and tutorials.</string>
+	<key>Summary</key>
+	<string>A documentation Catalog</string>
+	<key>Name</key>
+	<string>Documentation Catalog</string>
+	<key>MainTemplateFile</key>
+	<string>___FILENAME___.docc</string>
+	<key>DefaultCompletionName</key>
+	<string>Documentation</string>
+	<key>Kind</key>
+	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
+	<key>SortOrder</key>
+	<integer>1</integer>
+	<key>Platforms</key>
+	<array/>
+</dict>
+</plist>

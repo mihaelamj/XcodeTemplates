@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Kind</key>
+    <string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
+    <key>Identifier</key>
+    <string>com.apple.dt.unit.multiPlatform.appWithSafariExtension</string>
+    <key>Ancestors</key>
+    <array>
+        <string>com.apple.dt.unit.base</string>
+        <string>com.apple.dt.unit.languageChoice</string>
+        <string>com.apple.dt.unit.crossPlatformBase</string>
+    </array>
+    <key>Concrete</key>
+    <true/>
+    <key>Description</key>
+    <string>This template creates a multi-platform Safari Extension application.</string>
+    <key>NameOfInitialFileForEditor</key>
+    <string>manifest.json</string>
+    <key>Platforms</key>
+    <array />
+    <key>Options</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>userInterface</string>
+            <key>Override</key>
+            <string>Storyboard</string>
+        </dict>
+        <dict>
+            <key>Identifier</key>
+            <string>appLifecycle</string>
+            <key>Override</key>
+            <string>Cocoa</string>
+        </dict>
+        <dict>
+            <key>Identifier</key>
+            <string>extensionBundleIdentifier</string>
+            <key>Override</key>
+            <string>ForAppTemplate</string>
+        </dict>
+        <dict>
+            <key>Identifier</key>
+            <string>extensionTargetType</string>
+            <key>Values</key>
+            <array>
+                <string>Full</string>
+                <string>Base</string>
+            </array>
+            <key>Default</key>
+            <string>Full</string>
+        </dict>
+    </array>
+    <key>Components</key>
+    <array>
+        <dict>
+            <key>Identifier</key>
+            <string>com.apple.dt.unit.multiPlatform.appWithSafariExtension.shared</string>
+            <key>Name</key>
+            <string>Shared (App)</string>
+        </dict>
+        <dict>
+            <key>Identifier</key>
+            <string>com.apple.dt.unit.multiPlatform.safariExtension.shared</string>
+            <key>Name</key>
+            <string>Shared (Extension)</string>
+        </dict>
+        <dict>
+            <key>Identifier</key>
+            <string>com.apple.dt.unit.multiPlatform.appWithSafariExtension.iOS</string>
+            <key>Name</key>
+            <string>iOS (App)</string>
+        </dict>
+        <dict>
+            <key>Identifier</key>
+            <string>com.apple.dt.unit.multiPlatform.appWithSafariExtension.macOS</string>
+            <key>Name</key>
+            <string>macOS (App)</string>
+        </dict>
+        <dict>
+            <key>Identifier</key>
+            <string>com.apple.dt.unit.multiPlatform.safariExtension.iOS</string>
+            <key>Name</key>
+            <string>iOS (Extension)</string>
+            <key>ProductBuildPhaseInjections</key>
+            <array>
+                <dict>
+                    <key>TargetIdentifier</key>
+                    <string>com.apple.dt.iosApplicationTarget</string>
+                </dict>
+            </array>
+        </dict>
+        <dict>
+            <key>Identifier</key>
+            <string>com.apple.dt.unit.multiPlatform.safariExtension.macOS</string>
+            <key>Name</key>
+            <string>macOS (Extension)</string>
+            <key>ProductBuildPhaseInjections</key>
+            <array>
+                <dict>
+                    <key>TargetIdentifier</key>
+                    <string>com.apple.dt.osxApplicationTarget</string>
+                </dict>
+            </array>
+        </dict>
+    </array>
+	<key>Image</key>
+	<dict>
+		<key>SystemSymbolName</key>
+		<string>safari</string>
+	</dict>
+</dict>
+</plist>

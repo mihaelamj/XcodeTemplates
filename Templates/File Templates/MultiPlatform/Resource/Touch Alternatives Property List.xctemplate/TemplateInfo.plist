@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DefaultCompletionName</key>
+	<string>com.apple.uikit.inputalternatives</string>
+	<key>Description</key>
+	<string>A Touch Alternatives Property List file.</string>
+	<key>Kind</key>
+	<string>Xcode.IDEFoundation.TextSubstitutionFileTemplateKind</string>
+	<key>MainTemplateFile</key>
+	<string>___FILEBASENAME___.plist</string>
+	<key>Summary</key>
+	<string>A Touch Alternatives Property List file.</string>
+	<key>Platforms</key>
+	<array>
+		<string>com.apple.platform.iphoneos</string>
+	</array>
+	<key>Image</key>
+	<dict>
+		<key>FileTypeIcon</key>
+		<string>plist</string>
+	</dict>
+</dict>
+</plist>
